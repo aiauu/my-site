@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Grid Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style> 
+    .features {
+      background: #ffffff;
+      padding: 2rem 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .features h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .features-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .feature {
+      text-align: center;
+      width: 30%;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1rem;
+    }
+
+    .feature img {
+      width: 60px;
+      margin-bottom: 1rem;
+    }
+    .carousel img {
+      height: 600px; /* Fixed height for carousel images */
+      width: 600px;
+      object-fit: cover; /* Ensure images maintain aspect ratio without distortion */
+    }
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      width: 50%;
+      margin-right: 20px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #666;
+    }
+    .testimonial {
+      text-align: center;
+      padding: 2rem 0;
+      background: #f0f0f0;
+      margin: 2rem 0;
+      border-radius: 8px;
+    }
+
+    .subscribe {
+      text-align: center;
+      padding: 2rem 0;
+      background: #ffffff;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .hero-image-2 {
+      width: 350px;
+      height: 350px;
+      background: url(' https://www.mann-ivanov-ferber.ru/assets/images/covers/77/5577/1.00x-thumb.png ') no-repeat center center/cover;
+      border-radius: 10px;
+    }
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-text {
+        width: 100%;
+        margin-right: 0;
+      }
+
+      .features-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .feature {
+        width: 80%; /* Increase width on smaller screens */
+        margin-bottom: 2rem;
+      }
+
+      .carousel img {
+        height: 300px; /* Adjust carousel image height for smaller screens */
+      }
+
+      .subscribe input[type="email"],
+      .subscribe input[type="text"] {
+        width: 100%; /* Full-width inputs for small screens */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-text h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero-text p {
+        font-size: 1rem;
+      }
+
+      .feature {
+        width: 90%;
+      }
+
+      .carousel img {
+        height: 200px;
+      }
+    }
+
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="bg-primary text-white text-center py-3">
+    <h1>Қазақша кітаптар</h1>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Басты бет</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href=" file:///C:/Users/pc/source/repos/ConsoleApplication1/ConsoleApplication1/май%20ктап.html">Акциялар</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Ашылмалы тізім
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href=" file:///C:/Users/pc/source/repos/ConsoleApplication1/ConsoleApplication1/ктап%20жалгас.html  "> Әр түрлі кітаптар </a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href=" file:///C:/Users/pc/source/repos/ConsoleApplication1/ConsoleApplication1/мекен.html">Мекенжай</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href=" file:///C:/Users/pc/source/repos/ConsoleApplication1/ConsoleApplication1/onl.html"  > Онлайн кітаптар</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <li><a href=" file:///C:/Users/pc/source/repos/ConsoleApplication1/ConsoleApplication1/333.html  ">Тіркелу</a></li>   
+      
+          </li>
+        </ul>
+        <form class="d-flex" role="іздеу">
+          <input class="form-control me-2" type="search" placeholder="іздеу" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit"> іздеу </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- Main Section -->
+  <section class="container py-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Қазақша кітаптардың әлеміне қош келдіңіз</h2>
+  <p> Қазақтың рухани байлығын сақтап, жаңа ұрпаққа жеткізу мақсатында ең үздік кітаптарды ұсынамыз.</p>
+  <button class="btn btn-danger "  a href=" https://kitapal.kz/book/martin-iden-ddgek-london">  Кітап сатып алу </a></button>
+  <button class="btn btn-danger"  a href=" https://kitapal.kz/book/abay-dgoly-4-tom-komplekt">  Себетке қосу</button>
+      </div>
+      <div class="col-md-6">
+        <img src="https://sun9-77.userapi.com/impf/c830408/v830408688/1504b2/XjmgpOCXuqc.jpg?size=807x807&quality=96&sign=0d5e63657fc1f5f261a55e3085402833&c_uniq_tag=tJojFJRKbWclfWcdKyXPd3PDEZw8RXbl5JKL0JnE0Rg&type=album" class="img-fluid" alt="...">
+      </div>
+    </div>
+  </section>
+<!-- Slider -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://sun9-24.userapi.com/s/v1/ig2/89PIPts1N7uTJbulVR7oQhTPaBb16Zm36UQa756EiDiT6JY1AniMNtFG7S2fLxQDbefajohmguwTAqzbmtl-kXeD.jpg?quality=96&as=32x32,48x48,72x72,108x108,160x160,240x240,360x360,480x480,540x540,640x640&from=bu&u=XWQvq43xOU_QI0uHmh5ymoz-Dv01gzlnlye42k_wKjU&cs=640x640" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="http://biblio-zhelezinka.kz/assets/images/news/reviews/71/balbulak.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://simg.marwin.kz/media/catalog/product/cache/8d1771fdd19ec2393e47701ba45e606d/migrated/article/22145/54_tn3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+  <section class="features">
+    <div class="container">
+      <h2>Біздің артықшылықтарымыз</h2>
+      <div class="features-content">
+        <div class="feature">
+          <img src="https://kitapal.kz/media/2023/12/21/%D2%9B%D0%B0%D1%80%D0%B0%20%D1%81%D3%A9%D0%B7%D0%B4%D0%B5%D1%80%20%D0%BC%D2%B1%D2%9B%D0%B0%D0%B1%D0%B0.jpg" alt="Feature 1">
+          <h3><a href="https://kitapal.kz/catalog/48">Классикалық кітаптар</a></h3>
+          <p>Абай, Мұхтар Әуезов, Шоқан Уәлиханов шығармалары.</p>
+        </div>
+        <div class="feature">
+          <img src="https://kitapal.kz/media/2024/04/09/122147394100.jpeg" alt="Feature 2">
+          <h3><a href="https://kitapal.kz/catalog/7">Жаңа авторлар</a></h3>
+          <p>Қазіргі заманғы қазақ жазушыларының үздік туындылары.</p>
+        </div>
+        <div class="feature">
+          <img src="https://kitapal.kz/media/2024/09/11/85435623145502.jpg" alt="Feature 3">
+          <h3><a href="https://kitapal.kz/catalog/18">Балалар әдебиеті</a></h3>
+          <p>Кішкентай оқырмандарға арналған қызықты ертегілер.</p>
+        </div>
+      </div>
+    </div>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Өзіңді тану жолында</h1>
+        <p>Психологиялық кітаптар ішкі жан дүниеңізді зерттеуге, эмоцияларды түсінуге көмектеседі</p>
+      </div>
+      <div class="hero-image-2"></div>
+    </section>
+  <!-- Toasts -->
+
+  <button class="btn btn-secondary" id="showToast">Психологиялық дәріске жазылу</button>
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Хабарлама</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+         Сіз дәрәске сәтті жазылдыңыз!
+      </div>
+    </div>
+  </div>
+
+</div>
+    <section class="testimonial">
+      <div class="container">
+        <p>"Қазақ әдебиеті - ұлттың рухани байлығы. Бұл сайт маған көп нәрсе берді!"</p>
+        <p>- Айгүл, оқырман</p>
+      </div>
+    </section>
+  
+    <section class="subscribe">
+      <div class="container">
+        <h3>Жаңалықтардан хабардар болыңыз</h3>
+        <form>
+          <input type="email" placeholder="Email енгізіңіз">
+          <input type="text" placeholder="Атыңыз">
+          <button type="submit">Жазылу</button>
+        </form>
+      </div>
+    </section>
+
+
+    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Акция туралы ақпарат
+    </button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Акция</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Барлық кітаптарға -20% жеңілдік!
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+  <div class="accordion mb-4" id="booksAccordion">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Көркем Әдебиет
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#booksAccordion">
+        <div class="accordion-body">- «Абай Жолы» – Мұхтар Әуезов  «Абай жолы» - қазақ жазушысы Мұхтар Әуезовтың тарихи–өмірбаяндық романы. Абай жолы романы қазақ әдебиетіндегі тұңғыш жазылған роман-эпопея саналады. Роман әр жылдары бірнеше кітап ретінде жарыққа шықты. Атап айтқанда 1-кітап 1942 жылы, 2-кітап 1947 жылы, 3-кітап 1952 (кей деректерде 1954) жылы, ал 4-кітап 1956 жылы жарыққа шықты.
+
+          Романның «Абай» атанған алғашқы екі кітабына КСРО Мемлекеттік сыйлығы (1949), «Абай жолының» тұтас төрт томына Лениндік сыйлық (1959) берілді.</div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Ғылыми Әдебиет
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#booksAccordion">
+        <div class="accordion-body">- «Sapiens» – Юваль Ной Харари 
+          «Sapiens: Краткая история человечества»  — книга профессора Юваля Ноя Харари, впервые опубликованная на иврите в Израиле в 2011 году, а на английском языке в 2014 году. Харари называет одним из основных источников вдохновения книгу «Ружья, микробы и сталь» Джареда Даймонда (1997), показавшую, что можно «задавать очень большие вопросы и отвечать на них научно».
+
+Книга была воспринята неоднозначно. Учёные в большинстве своём отнеслись к ней скептически, однако реакция читателей на книгу была положительной.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Көркем Әдебиет</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Ғылыми Әдебиет</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <strong> жастан 11 жасқа дейінгі балаларға арналған әдебиеттер тізімі</strong>
+<ul>
+      <li>1. Корней Чуковский. Бармалей. Тарақан. Қолтырауын. Ұрланған күн. Бибигонның шытырман оқиғалары.</li>
+      <li>2. Николай Носов. Данно мен оның достарының шытырман оқиғалары.</li>
+        </li>3. Николай Носов. Мишкина ботқасы. Телефон. Досым. Армандаушылар. Біздің мұз айдыны. Метро. Федина тапсырма. Және басқа әңгімелер.</li>
+        <li> 4. Алексей Толстой. Алтын кілт немесе Пиноккионың шытырман оқиғалары.</li>
+      <li> 5. Алексей Толстой. Ертегілер.</li>
+        <li> 6. Карло Коллоди. Буратиноның шытырман оқиғалары.өркем әдебиет тізімі.</li>
+</ul>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <strong></strong> Ғылыми әдебиет тізімі.</strong>
+      <ul>
+        <li>1. Қос спираль арқылы Джеймс Уотсон</li>
+          <li> 2.Галилейдің өмірі арқылы Bertolt Brecht</li>
+            <li> 3.Плутон Республикасы арқылы Питер Медавар</li>
+              <li>  4.Бүркіттің саяхаты арқылы Чарльз Дарвин</li>
+                <li> 5.Бос тақта арқылы Стивен Пинкер</li>
+                  <li> 6.Тұруға арналған аяқ арқылы Оливер Сакс</li>
+</ul>
+    </div>
+  </div>
+ <!-- Card -->
+
+ <div class="card" style="width: 18rem;">
+   <img src="https://avatars.mds.yandex.net/i?id=5c061b8018f9b76eb4f53fd8942fcda045f67cc0-8805865-images-thumbs&n=13" class="card-img-top" alt="Book Image">
+   <div class="card-body">
+     <h5 class="card-title">Абай Жолы</h5>
+     <p class="card-text">Мұхтар Әуезовтің атақты шығармасы.</p>
+     <a href=" https://kitapal.kz/basket" class="btn btn-primary">Сатып алу</a>
+   </div>
+ </div>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+ <script>
+   const toastTrigger = document.getElementById('showToast');
+   const toastLiveExample = document.getElementById('liveToast');
+   if (toastTrigger) {
+     toastTrigger.addEventListener('click', () => {
+       const toast = new bootstrap.Toast(toastLiveExample);
+       toast.show();
+     });
+   }
+ </script>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>© 2024 Менің Сайтым. Барлық құқықтар қорғалған.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
